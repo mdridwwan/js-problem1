@@ -110,13 +110,37 @@
 // }
 
 let array = [200, 300, 500, 502, 10, 30, 20, 5, 100, 870, 201, 33];
-let largest = array[0];
-for (let i = 0; i <= array.length; i++) {
-  if (array[i] < largest) {
-    largest = array[i];
+// let largest = array[0];
+// for (let i = 0; i <= array.length; i++) {
+//   if (array[i] > largest) {
+//     console.log(largest);
+//     largest = array[i];
+//   } else {
+//     console.log(array[i]);
+//   }
+// }
+
+const bubbleShort = (array) => {
+  const len = array.length;
+
+  for (let i = 0; i < len; i++) {
+    for (let j = 0; j < len; j++) {
+      if (array[j] > array[j + 1]) {
+        //swap
+        const temp = array[j];
+        array[j] = array[j + 1];
+        array[j + 1] = temp;
+      }
+    }
   }
-}
-console.log(largest);
+  return array;
+};
+
+console.log(array);
+bubbleShort(array);
+console.log(array);
+
+// console.log(largest);
 
 // a = 10;
 // b = 20;
