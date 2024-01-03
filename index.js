@@ -120,25 +120,25 @@ let array = [200, 300, 500, 502, 10, 30, 20, 5, 100, 870, 201, 33];
 //   }
 // }
 
-const bubbleShort = (array) => {
-  const len = array.length;
+// const bubbleShort = (array) => {
+//   const len = array.length;
 
-  for (let i = 0; i < len; i++) {
-    for (let j = 0; j < len; j++) {
-      if (array[j] > array[j + 1]) {
-        //swap
-        const temp = array[j];
-        array[j] = array[j + 1];
-        array[j + 1] = temp;
-      }
-    }
-  }
-  return array;
-};
+//   for (let i = 0; i < len; i++) {
+//     for (let j = 0; j < len; j++) {
+//       if (array[j] > array[j + 1]) {
+//         //swap
+//         const temp = array[j];
+//         array[j] = array[j + 1];
+//         array[j + 1] = temp;
+//       }
+//     }
+//   }
+//   return array;
+// };
 
-console.log(array);
-bubbleShort(array);
-console.log(array);
+// console.log(array);
+// bubbleShort(array);
+// console.log(array);
 
 // console.log(largest);
 
@@ -156,3 +156,34 @@ console.log(array);
 
 // console.log(a, b);
 // console.log(c);
+
+const arr = [5, 4, 6, 7, 2, 9, 1];
+
+// bubble sort algorithm
+// [5, 4, 6, 7, 2, 9, 1];
+// 1 = [4, 5, 6, 2, 7, 1, 9];
+// 2 = [4, 5, 2, 6, 1, 7, 9];
+// 3 = [4, 2, 5, 1, 6, 7, 9];
+// 4 = [2, 4, 1, 5, 6, 7, 9];
+// 5 = [2, 1, 4, 5, 6, 7, 9];
+// 6 = [1, 2, 4, 5, 6, 7, 9];
+// 7 = [1, 2, 4, 5, 6, 7, 9];
+
+const bubbleSort = (arr) => {
+  const len = arr.length;
+
+  for (let i = 0; i < len; i++) {
+    for (let j = 0; j < len; j++) {
+      if (arr[j] > arr[j + 1]) {
+        //swap
+        const temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+  return arr;
+};
+
+const reuslt = bubbleSort(arr);
+console.log(reuslt);
