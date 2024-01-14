@@ -157,7 +157,7 @@ let array = [200, 300, 500, 502, 10, 30, 20, 5, 100, 870, 201, 33];
 // console.log(a, b);
 // console.log(c);
 
-const arr = [5, 4, 6, 7, 2, 9, 1];
+const arr = [5, 4, 6, 7, 2, 9, 1, 11];
 
 // bubble sort algorithm
 // [5, 4, 6, 7, 2, 9, 1];
@@ -169,16 +169,34 @@ const arr = [5, 4, 6, 7, 2, 9, 1];
 // 6 = [1, 2, 4, 5, 6, 7, 9];
 // 7 = [1, 2, 4, 5, 6, 7, 9];
 
+// const bubbleSort = (arr) => {
+//   const len = arr.length;
+
+//   for (let i = 0; i < len; i++) {
+//     for (let j = 0; j < len - i - 1; j++) {
+//       console.log("hello");
+//       if (arr[j] > arr[j + 1]) {
+//         //swap
+//         const temp = arr[j];
+//         arr[j] = arr[j + 1];
+//         arr[j + 1] = temp;
+//       }
+//     }
+//   }
+//   return arr;
+// };
+
 const bubbleSort = (arr) => {
   const len = arr.length;
+  const swap = (arr, left, right) =>
+    ([arr[left], arr[right]] = [arr[right], arr[left]]);
 
   for (let i = 0; i < len; i++) {
-    for (let j = 0; j < len; j++) {
+    for (let j = 0; j < len - j - 1; j++) {
+      console.log("hello");
       if (arr[j] > arr[j + 1]) {
         //swap
-        const temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
+        swap(arr, j, j + 1);
       }
     }
   }
