@@ -1,3 +1,5 @@
+// Selection Sort Algorith
+
 const array = [40, 15, 36, 27, 67, 19, 21, 81];
 
 function selectionSort(array) {
