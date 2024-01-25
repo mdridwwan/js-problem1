@@ -24,4 +24,4 @@ function mergeSort(arr) {
 let result = mergeSort([3, 5, 8, 5, 99, 1]);
 console.log(result);
 
-// every
+// every funtction
